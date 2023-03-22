@@ -13,7 +13,7 @@ const myImage = new CloudinaryImage('sample', {cloudName: 'dhirtao9q'}).resize(f
 const uploadHandler = () => {
     console.log("Uploading...");
 
-    fetch("http://localhost:9000/uploads/file", {
+    fetch("http://localhost:9000/upload", {
         method: "POST",
         body: image,
     }).then((res) => console.log("RESPONSE CLIENT  ", res));
@@ -46,16 +46,16 @@ console.log("State in Add Product image... ", image);
         <input class="form-control" type="text" id="formFilePrice" name="price" onChange={changeHandler}/>
       </div>
       <div class="mb-3">
-        <label for="formFile" class="form-label">
-          Нэг зураг оруулах
+        <label for="prodQuantity" class="form-label">
+          Тоо
         </label>
-        <input class="form-control" type="file" id="formFile" onChange={changeHandler}/>
+        <input class="form-control" type="number" id="prodQuantity" name="image1" onChange={changeHandler}/>
       </div>
       <div class="mb-3">
-        <label for="formFile" class="form-label">
+        <label for="formFileImage" class="form-label">
           Нэг зураг оруулах
         </label>
-        <input class="form-controcl" type="file" id="formFile" onChange={changeHandler}/>
+        <input class="form-control" type="file" id="formFileImage" name="image2" onChange={changeHandler}/>
       </div>
       <div class="mb-3">
         <label for="formFileMultiple" class="form-label">
