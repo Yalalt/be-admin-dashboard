@@ -33,36 +33,36 @@ console.log("State in Add Product image... ", image);
   return (
     <div>
       <h3 className="text-secondary fs-4">Бүтээгдэхүүн нэмэх</h3>
-      <div class="mb-3">
-        <label for="formFileName" class="form-label">
+      <div className="mb-3">
+        <label for="formFileName" className="form-label">
           Нэр
         </label>
-        <input class="form-control" type="text" id="formFileName" name="name" onChange={changeHandler}/>
+        <input className="form-control" type="text" id="formFileName" name="name" onChange={changeHandler}/>
       </div>
-      <div class="mb-3">
-        <label for="formFilePrice" class="form-label">
+      <div className="mb-3">
+        <label for="formFilePrice" className="form-label">
           Үнэ
         </label>
-        <input class="form-control" type="text" id="formFilePrice" name="price" onChange={changeHandler}/>
+        <input className="form-control" type="text" id="formFilePrice" name="price" onChange={changeHandler}/>
       </div>
-      <div class="mb-3">
-        <label for="prodQuantity" class="form-label">
+      <div className="mb-3">
+        <label for="prodQuantity" className="form-label">
           Тоо
         </label>
-        <input class="form-control" type="number" id="prodQuantity" name="image1" onChange={changeHandler}/>
+        <input className="form-control" type="number" id="prodQuantity" name="image1" onChange={changeHandler}/>
       </div>
-      <div class="mb-3">
-        <label for="formFileImage" class="form-label">
+      <div className="mb-3">
+        <label for="formFileImage" className="form-label">
           Нэг зураг оруулах
         </label>
-        <input class="form-control" type="file" id="formFileImage" name="image2" onChange={changeHandler}/>
+        <input className="form-control" type="file" id="formFileImage" name="image2" onChange={changeHandler}/>
       </div>
-      <div class="mb-3">
-        <label for="formFileMultiple" class="form-label">
+      <div className="mb-3">
+        <label for="formFileMultiple" className="form-label">
           Олон зураг зэрэг оруулах
         </label>
         <input
-          class="form-control"
+          className="form-control"
           type="file"
           id="formFileMultiple"
           onChange={changeHandler}
