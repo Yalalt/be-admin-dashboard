@@ -38,7 +38,7 @@ const AddUser = () => {
     console.log("Successfull save...");
     const data = new FormData();
     data.append({
-        "user"
+        // "user"
     })
   }
 
