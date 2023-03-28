@@ -1,4 +1,16 @@
+
+
 const Products = () => {
+    // const [products, setProducts] = useState(null);
+    // useEffect(() => {
+    //   const getProductData = async () => {
+    //     const result = await axios.get("http://localhost:9000/api/product");
+
+    //   }
+
+    // }, []);
+
+
     return (
         <table class="table caption-top bg-white rounded mt-2">
         <caption className="text-secondary fs-4">Recent products</caption>

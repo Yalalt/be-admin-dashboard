@@ -5,8 +5,12 @@ import AddProduct from "./AddProduct.js";
 import Information from "./Information.js";
 import User from "./User.js";
 import AddUser from "./AddUser.js";
+import { useContext } from "react";
 
 function Home({ Toggle }) {
+
+  const productContext = useContext(null);
+
   return (
     <div className="px-3">
       <Navigation Toggle={Toggle} />
