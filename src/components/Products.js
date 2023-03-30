@@ -1,49 +1,40 @@
-
+import { useContext } from "react";
+import { ProContext } from "../App";
 
 const Products = () => {
-    // const [products, setProducts] = useState(null);
-    // useEffect(() => {
-    //   const getProductData = async () => {
-    //     const result = await axios.get("http://localhost:9000/api/product");
+  const prodContext = useContext(ProContext);
+  console.clear();
+  console.log("Product context >> ", prodContext);
 
-    //   }
-
-    // }, []);
-
-
-    return (
-        <table class="table caption-top bg-white rounded mt-2">
-        <caption className="text-secondary fs-4">Recent products</caption>
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Customers</th>
-            <th scope="col">Order ID</th>
-            <th scope="col">Phone number</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-    );
-}
+  return (
+    <table className="table caption-top bg-white rounded mt-2">
+      <caption className="text-secondary fs-4">Recent products</caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {prodContext[1].map((el, index) => {
+          return (
+            <tr key={index}>
+              <th scope="row">{index+1}</th>
+              <td>{el.name}</td>
+              <td>{el.price}</td>
+              <td>{el.stock}</td>
+              <td>{el.brand}</td>
+              <td>{el.category}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+};
 
 export default Products;

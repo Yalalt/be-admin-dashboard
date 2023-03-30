@@ -9,8 +9,6 @@ import { useContext } from "react";
 
 function Home({ Toggle }) {
 
-  const productContext = useContext(null);
-
   return (
     <div className="px-3">
       <Navigation Toggle={Toggle} />
